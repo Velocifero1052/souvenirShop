@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Form</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Registration</h1>
+    <form action="#" th:action="@{/demo/form}" th:object="${formFields}" method="post">
+        <p>First name: <input type="text" th:field="*{personFirstName}" /></p>
+        <p>Last name: <input type="text" th:field="*{personLastName}" /></p>
+        <p>Company: <input type="text" th:field="*{companyName}" /></p>
+        <p>City: <input type="text" th:field="*{addressCity}" /></p>
+        <p>Street: <input type="text" th:field="*{addressStreet}" /></p>
+        <p>Building: <input type="text" th:field="*{addressBuilding}" /></p>
+        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+    </form>
+
+</body>
+</html>
